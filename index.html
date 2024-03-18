@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Memory Game</title>
+</head>
+<body>
+    
+    <div class="controls">
+        <ul>
+            <li id="ez">Easy</li>
+            <li id="nrml">Normal</li>
+            <li id="hell">Hell</li>
+        </ul>  
+    </div>
+
+    <div class="gameOver d-none">
+        <h1 >You are just a loser, <br> delete Your life</h1>
+    </div>
+
+    <div class="win  d-none">
+        <h1 >oh hell, how did you won</h1>
+    </div>
+    <div class="audio">
+        <audio preload="auto" id="flip" src="audio/flip.mp3"></audio>
+        <audio volume="0.3" preload="auto" id="coin" src="audio/coin.mp3"></audio>
+        <audio preload="auto" id="win" src="audio/win.mp3"></audio>
+        <audio preload="auto" id="wrong" src="audio/wrong.mp3"></audio>
+        <audio preload="auto" id="lose" src="audio/lose.mp3"></audio>
+    </div>
+
+    <div class="info">
+        <div class="name">
+            Hello: <span></span>
+        </div>
+        <div class="timer">
+            <span></span>
+        </div>
+        <div class="tries">
+            Wrong tries: <span>0</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row gameContainer">
+
+            <div class="col-md-2    col-sm-3 gameBlock" data-img="html">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img class="img-fluid" src="imgs/p1.png" alt="">
+                </div>
+            </div>
+        
+        
+        <div class="col-md-2    col-sm-3 gameBlock" data-img="html">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p1.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="col-md-2 col-sm-3 gameBlock" data-img="css">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p2.png" alt="">
+            </div>
+        </div>
+
+        <div class="col-md-2 col-sm-3 gameBlock" data-img="css">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p2.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="col-md-2 col-sm-3 gameBlock" data-img="js">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p3.png" alt="">
+            </div>
+        </div>
+
+        <div class="col-md-2 col-sm-3 gameBlock" data-img="js">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p3.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="col-md-2 col-sm-3 gameBlock" data-img="laravel">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p4.png" alt="">
+            </div>
+        </div>
+
+        <div class="col-md-2 col-sm-3 gameBlock" data-img="laravel">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p4.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="col-md-2 col-sm-3 gameBlock" data-img="react">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p5.png" alt="">
+            </div>
+        </div>
+
+        <div class="col-md-2    col-sm-3 gameBlock" data-img="react">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p5.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="col-md-2    col-sm-3 gameBlock" data-img="veu">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p6.png" alt="">
+            </div>
+        </div>
+
+        <div class="col-md-2    col-sm-3 gameBlock" data-img="veu">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p6.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="col-md-2    col-sm-3 gameBlock" data-img="flutter">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p7.png" alt="">
+            </div>
+        </div>
+
+        <div class="col-md-2    col-sm-3 gameBlock" data-img="flutter">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p7.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="col-md-2    col-sm-3 gameBlock" data-img="angular">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p8.png" alt="">
+            </div>
+        </div>
+
+        <div class="col-md-2    col-sm-3 gameBlock" data-img="angular">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p8.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="col-md-2    col-sm-3 gameBlock" data-img="python">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p9.png" alt="">
+            </div>
+        </div>
+
+        <div class="col-md-2    col-sm-3 gameBlock" data-img="python">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p9.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="col-md-2    col-sm-3 gameBlock" data-img="node">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p10.png" alt="">
+            </div>
+        </div>
+
+        <div class="col-md-2    col-sm-3 gameBlock" data-img="node">
+            <div class="face front"></div>
+            <div class="face back">
+                <img class="img-fluid" src="imgs/p10.png" alt="">
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+
+    <div class="myMark">
+        <h5>This website made by <span>Mohayyad Muawia</span></h5>
+        <a onclick="deleteMe()" class="btn text-light">close</a>
+      </div>    
+
+    <script src="js/main.js"></script>
+</body>
+</html>
